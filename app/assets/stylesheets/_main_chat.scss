@@ -1,0 +1,115 @@
+.main_chat{
+  background-color:" #ffffff";
+  width: calc(100vw - 300px);
+
+  &_header{
+    background-color: #ffffff;
+    height: 100px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+
+    &_left_box{
+      margin-top: 35px;
+
+      &_current-group{
+        font-size: 20px;
+        color: #333333;
+      }
+      &_member-list{
+        font-size: 12px;
+        color: #999999;
+        padding-top: 15px;
+      }
+    }
+    &_edit-btn{
+      .btn{
+        text-decoration: none;
+        color: #38aef0;
+        font-size: 16px;
+      }
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 28px;
+      border: solid 1px #38aef0;
+    }
+  }
+  &_messages{
+    background-color: #fafafa;
+    height: calc(100vh - 190px);
+    padding: 46px 40px;
+
+    &_message{
+      padding-bottom: 40px;
+
+      &_users{
+        display: flex;
+
+        &_user-name{
+          color: #333333;
+          font-size: 16px;
+        }
+        &_day{
+          color: #999999;
+          font-size: 12px;
+          padding-left: 10px;
+        }
+      }
+      &_post{
+        color: #434A54;
+        font-size: 14px;
+        margin-top: 12px;
+      }
+    }
+  }
+  &_footer{
+    background-color: #d2d2d2;
+    height: 90px;
+    display: flex;
+
+    &_form{
+      position: relative;
+      margin-left: 20px;
+      padding: 20px 5px;
+      width: calc(100% - 155px);
+
+      &_input-text{
+        .input_text_new_message{
+          font-size: 16px;
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+          border-style: none;
+          background-color: #ffffff;
+        }
+      }
+      &_input-img{
+        .fa-images{
+          position: absolute;
+          top: 35px;
+          right: 20px;
+          font-size: 20px;
+          background-color:#ffffff;
+          cursor: pointer;
+        }
+        .input_img_file{
+          display: none;
+        }
+      }
+    }
+    &_send-btn{
+      .submit-btn{
+        text-decoration: none;
+        color: #ffffff;
+      }
+      width: 100px;
+      height: 50px;
+      margin-top: 20px;
+      margin-left: 15px;
+      padding: 15px 30px;
+      background-color: #38aef0;
+      cursor: pointer;
+    }
+  }
+}
