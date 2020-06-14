@@ -50,6 +50,15 @@
       &_group-name {
         font-size: 15px;
         color: #ffffff;
+
+        a{
+          text-decoration: none;
+        }
+
+        .group-name{
+          padding-top: 5px;
+          color: #ffffff;
+        }
       }
 
       &_latest-message {
