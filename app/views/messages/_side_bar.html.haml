@@ -6,7 +6,7 @@
         =current_user.name
       .side_bar_header_box_menu
         .side_bar_header_box_menu_group
-          = link_to "#", class: "#" do
+          = link_to new_group_path do
             = icon('fas', 'object-group')
         .side_bar_header_box_menu_edit
           = link_to edit_user_path(current_user) do
@@ -15,6 +15,10 @@
   .side_bar_groups
     .side_bar_groups_group
       .side_bar_groups_group_group-name
-        tech camp
+        - current_user.groups.each do |group|
+          .group
+            = link_to '#' do
+              .group-name
+                = group.name
       .side_bar_groups_group_latest-message
         まだメッセージがありません
