@@ -3,29 +3,27 @@
   .main_chat_header
     .main_chat_header_left_box
       .main_chat_header_left_box_current-group
-        test
+        =@group.name
       .main_chat_header_left_box_member-list
-        Member : masa
+        Member:
+        - @group.users.each do |user|
+          = user.name
     .main_chat_header_edit-btn
-      = link_to 'Edit', root_path, class: 'btn'
+      = link_to 'Edit', edit_group_path(@group), class: 'btn'
 
   .main_chat_messages
-    .main_chat_messages_message
-      .main_chat_messages_message_users
-        .main_chat_messages_message_users_user-name
-          masa
-        .main_chat_messages_message_users_day
-          2020/06/10(Wed)
-      .main_chat_messages_message_post
-        今日は曇りです。
+    =render @messages
 
   .main_chat_footer
-    .main_chat_footer_form
-      .main_chat_footer_form_input-text
-        %input{ type: 'text', class: 'input_text_new_message', placeholder: 'type a message'}/
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'input_text_new_message', placeholder: 'type a message'
+      -# .main_chat_footer_form
+      -#   .main_chat_footer_form_input-text
+          -# = f.text_field :content, class: 'input_text_new_message', placeholder: 'type a message'
       .main_chat_footer_form_input-img
-        %label{class: "input-box_images"}
-          = icon('fas', 'images')
-          %input{type: "file", class: "input_img_file"}
-    .main_chat_footer_send-btn
-      = link_to 'Send', root_path, class: 'submit-btn'
+        = f.label :image, class: 'input-box_images' do
+          = icon('fas', 'image', class: 'images')
+          = f.file_field :image, class: 'input_img_file'
+      = f.submit 'Send', class: 'submit-btn'
+      -# .main_chat_footer_send-btn
+        -# = f.submit 'Send', class: 'submit-btn'
