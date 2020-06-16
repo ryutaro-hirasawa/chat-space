@@ -66,15 +66,15 @@
   &_footer{
     background-color: #d2d2d2;
     height: 90px;
-    display: flex;
 
-    &_form{
+    .new_message{
       position: relative;
       margin-left: 20px;
       padding: 20px 5px;
-      width: calc(100% - 155px);
+      // width: calc(100% - 155px);
+      display: flex;
 
-      &_input-text{
+      // &_input-text{
         .input_text_new_message{
           font-size: 16px;
           height: 50px;
@@ -82,13 +82,13 @@
           padding: 0 40px 0 10px;
           border-style: none;
           background-color: #ffffff;
-        }
-      }
-      &_input-img{
-        .fa-images{
+        // }
+         }
+      // &_input-img{
+        .main_chat_footer_form_input-img{
           position: absolute;
-          top: 35px;
-          right: 20px;
+          top: 30px;
+          right: 180px;
           font-size: 20px;
           background-color:#ffffff;
           cursor: pointer;
@@ -96,17 +96,18 @@
         .input_img_file{
           display: none;
         }
-      }
+      // }
     }
-    &_send-btn{
-      .submit-btn{
-        text-decoration: none;
-        color: #ffffff;
-      }
+    // &_send-btn{
+    .submit-btn{
+      text-decoration: none;
+      color: #ffffff;
+      // }
       width: 100px;
       height: 50px;
-      margin-top: 20px;
+      // margin-top: 10px;
       margin-left: 15px;
+      margin-right: 40px;
       padding: 15px 30px;
       background-color: #38aef0;
       cursor: pointer;
